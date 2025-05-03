@@ -1,5 +1,5 @@
 {
-  "name": "your-vendor/algeria-geo",
+  "name": "kazistm/algeria-geo",
   "description": "Algerian Cities (Wilayas) and Communes data package for Laravel.",
   "type": "laravel-package",
   "keywords": [
