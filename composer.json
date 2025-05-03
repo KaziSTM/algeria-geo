@@ -3,16 +3,7 @@
   "description": "Algerian Cities (Wilayas) and Communes data package for Laravel.",
   "type": "laravel-package",
   "keywords": [
-    "algeria",
-    "wilaya",
-    "city",
-    "commune",
-    "daira",
-    "geo",
-    "location",
-    "laravel",
-    "database",
-    "seeder"
+    "algeria", "wilaya", "city", "commune", "daira", "geo", "location", "laravel", "database", "seeder"
   ],
   "homepage": "https://github.com/KaziSTM/algeria-geo",
   "support": {
@@ -46,30 +37,25 @@
   "autoload-dev": {
     "psr-4": {
       "KaziSTM\\AlgeriaGeo\\Tests\\": "tests/"
-    },
-    "extra": {
-      "laravel": {
-        "providers": [
-          "KaziSTM\\AlgeriaGeo\\AlgeriaGeoServiceProvider"
-        ]
-      }
-    },
-    "scripts": {
-      "test": "./vendor/bin/pest",
-      "lint": "./vendor/bin/pint"
-    },
-    "config": {
-      "sort-packages": true,
-      "allow-plugins": {
-        "pestphp/pest-plugin": true
-      }
-    },
-    "minimum-stability": "dev",
-    "prefer-stable": true
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "KaziSTM\\AlgeriaGeo\\AlgeriaGeoServiceProvider"
+      ]
+    }
+  },
+  "scripts": {
+    "test": "./vendor/bin/pest",
+    "lint": "./vendor/bin/pint"
   },
   "config": {
+    "sort-packages": true,
     "allow-plugins": {
       "pestphp/pest-plugin": true
     }
-  }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
 }
