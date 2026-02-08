@@ -9,43 +9,33 @@ use KaziSTM\AlgeriaGeo\Models\Commune;
 
 class CommuneSeeder extends Seeder
 {
-    /**
-     * Run the database seeds.
-     *
-     * @return void
-     */
-    public function run()
+    public function run(): void
     {
-        // Clear the table first
-        DB::table('communes')->delete();
+        DB::table('communes')->truncate();
 
-        $jsonPath = __DIR__ . '/../../../data/communes.json'; // Path to your JSON file
+        $jsonPath = __DIR__ . '/../../../data/communes.json';
 
-        if (!File::exists($jsonPath)) {
-            $this->command->error("Communes JSON file not found at {$jsonPath}");
+        if (! File::exists($jsonPath)) {
+            $this->command->error("Communes JSON file not found");
             return;
         }
 
-        $json = File::get($jsonPath);
-        $communes = json_decode($json, true); //
+        $communes = json_decode(File::get($jsonPath), true, 512, JSON_THROW_ON_ERROR);
 
-        if (json_last_error() !== JSON_ERROR_NONE) {
-            $this->command->error("Error decoding Communes JSON: " . json_last_error_msg());
-            return;
-        }
+        Commune::unsetEventDispatcher(); 
+        collect($communes)
+            ->map(fn($commune) => [
+                'id'           => $commune['id'],
+                'post_code'    => $commune['post_code'],
+                'name'         => $commune['name'],
+                'wilaya_id'    => $commune['wilaya_id'],
+                'arabic_name'  => $commune['arabic_name'],
+                'latitude'     => isset($commune['latitude']) ? (float) $commune['latitude'] : null,
+                'longitude'    => isset($commune['longitude']) ? (float) $commune['longitude'] : null,
+            ])
+            ->chunk(1000)
+            ->each(fn($chunk) => Commune::insert($chunk->toArray()));
 
-        foreach ($communes as $communeData) { //
-            Commune::create([ // Use the model to create records
-                'id' => $communeData['id'], // Use existing ID from JSON
-                'post_code' => $communeData['post_code'], //
-                'name' => $communeData['name'], //
-                'wilaya_id' => $communeData['wilaya_id'], //
-                'arabic_name' => $communeData['arabic_name'], //
-                // Ensure keys exist and handle potential type issues
-                'latitude' => isset($communeData['latitude']) ? (float)$communeData['latitude'] : null, //
-                'longitude' => isset($communeData['longitude']) ? (float)$communeData['longitude'] : null, //
-            ]);
-        }
-        $this->command->info('Communes table seeded successfully!');
+        $this->command->info('Communes seeded successfully.');
     }
 }

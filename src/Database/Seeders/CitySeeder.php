@@ -9,43 +9,33 @@ use KaziSTM\AlgeriaGeo\Models\City;
 
 class CitySeeder extends Seeder
 {
-    /**
-     * Run the database seeds.
-     *
-     * @return void
-     */
-    public function run()
+    public function run(): void
     {
-        // Clear the table first
-        DB::table('cities')->delete();
+        DB::table('cities')->truncate();
 
-        $jsonPath = __DIR__ . '/../../../data/wilayas.json'; // Path to your JSON file
+        $jsonPath = __DIR__ . '/../../../data/wilayas.json';
 
-        if (!File::exists($jsonPath)) {
-            $this->command->error("Wilayas JSON file not found at {$jsonPath}");
+        if (! File::exists($jsonPath)) {
+            $this->command->error("Wilayas JSON file not found");
             return;
         }
 
-        $json = File::get($jsonPath);
-        $cities = json_decode($json, true); //
+        $cities = json_decode(File::get($jsonPath), true, 512, JSON_THROW_ON_ERROR);
 
-        if (json_last_error() !== JSON_ERROR_NONE) {
-            $this->command->error("Error decoding Wilayas JSON: " . json_last_error_msg());
-            return;
-        }
+        City::unsetEventDispatcher();
 
-        foreach ($cities as $cityData) { //
-            City::create([ // Use the model to create records
-                'id' => $cityData['id'], // Use existing ID from JSON
-                'code' => $cityData['code'], //
-                'name' => $cityData['name'], //
-                'arabic_name' => $cityData['arabic_name'], //
-                // Ensure keys exist and handle potential type issues
-                'longitude' => isset($cityData['longitude']) ? (float)$cityData['longitude'] : null, //
-                'latitude' => isset($cityData['latitude']) ? (float)$cityData['latitude'] : null, //
-            ]);
-        }
+        collect($cities)
+            ->map(fn($city) => [
+                'id'           => $city['id'],
+                'code'         => $city['code'],
+                'name'         => $city['name'],
+                'arabic_name'  => $city['arabic_name'],
+                'latitude'     => isset($city['latitude']) ? (float) $city['latitude'] : null,
+                'longitude'    => isset($city['longitude']) ? (float) $city['longitude'] : null,
+            ])
+            ->chunk(1000)
+            ->each(fn($chunk) => City::insert($chunk->toArray()));
 
-        $this->command->info('Cities table seeded successfully!');
+        $this->command->info('Cities seeded successfully.');
     }
 }
