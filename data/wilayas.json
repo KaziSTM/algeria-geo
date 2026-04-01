@@ -4,463 +4,758 @@
         "code": 1,
         "name": "Adrar",
         "arabic_name": "أدرار",
-        "longitude": 28.0174403,
-        "latitude": -0.2642497
+        "slug": "adrar",
+        "latitude": 27.8808838,
+        "longitude": -0.28943,
+        "geo_type": "APPROXIMATE",
+        "geo_verified": true
     },
     {
         "id": 2,
         "code": 2,
         "name": "Chlef",
         "arabic_name": "الشلف",
-        "longitude": 36.1579664,
-        "latitude": 1.3372823
+        "slug": "chlef",
+        "latitude": 36.1581301,
+        "longitude": 1.3371874,
+        "geo_type": "APPROXIMATE",
+        "geo_verified": true
     },
     {
         "id": 3,
         "code": 3,
         "name": "Laghouat",
         "arabic_name": "الأغواط",
-        "longitude": 33.8078341,
-        "latitude": 2.8628294
+        "slug": "laghouat",
+        "latitude": 33.8079718,
+        "longitude": 2.8628592,
+        "geo_type": "APPROXIMATE",
+        "geo_verified": true
     },
     {
         "id": 4,
         "code": 4,
         "name": "Oum El Bouaghi",
         "arabic_name": "أم البواقي",
-        "longitude": 35.8688789,
-        "latitude": 7.1108266
+        "slug": "oum-el-bouaghi",
+        "latitude": 35.8688789,
+        "longitude": 7.1108266,
+        "geo_type": "APPROXIMATE",
+        "geo_verified": true
     },
     {
         "id": 5,
         "code": 5,
         "name": "Batna",
         "arabic_name": "باتنة",
-        "longitude": 35.5634192,
-        "latitude": 6.1889996
+        "slug": "batna",
+        "latitude": 35.5446077,
+        "longitude": 6.1596945,
+        "geo_type": "APPROXIMATE",
+        "geo_verified": true
     },
     {
         "id": 6,
         "code": 6,
         "name": "Béjaïa",
         "arabic_name": "بجاية",
-        "longitude": 36.7515258,
-        "latitude": 5.0556837
+        "slug": "bejaia",
+        "latitude": 36.5574472,
+        "longitude": 4.7691586,
+        "geo_type": "APPROXIMATE",
+        "geo_verified": true
     },
     {
         "id": 7,
         "code": 7,
         "name": "Biskra",
         "arabic_name": "بسكرة",
-        "longitude": 34.8449437,
-        "latitude": 5.7248567
+        "slug": "biskra",
+        "latitude": 34.8536654,
+        "longitude": 5.7277262,
+        "geo_type": "APPROXIMATE",
+        "geo_verified": true
     },
     {
         "id": 8,
         "code": 8,
-        "name": "Bechar",
+        "name": "Béchar",
         "arabic_name": "بشار",
-        "longitude": 31.6238098,
-        "latitude": -2.2162443
+        "slug": "bechar",
+        "latitude": 29.3821013,
+        "longitude": -3.097702,
+        "geo_type": "APPROXIMATE",
+        "geo_verified": true
     },
     {
         "id": 9,
         "code": 9,
         "name": "Blida",
         "arabic_name": "البليدة",
-        "longitude": 36.4735715,
-        "latitude": 2.8323153
+        "slug": "blida",
+        "latitude": 36.4735715,
+        "longitude": 2.8323153,
+        "geo_type": "APPROXIMATE",
+        "geo_verified": true
     },
     {
         "id": 10,
         "code": 10,
         "name": "Bouira",
         "arabic_name": "البويرة",
-        "longitude": 36.3691846,
-        "latitude": 3.9006194
+        "slug": "bouira",
+        "latitude": 36.3737098,
+        "longitude": 3.8980159,
+        "geo_type": "APPROXIMATE",
+        "geo_verified": true
     },
     {
         "id": 11,
         "code": 11,
         "name": "Tamanrasset",
         "arabic_name": "تمنراست",
-        "longitude": 22.7902972,
-        "latitude": 5.5193268
+        "slug": "tamanrasset",
+        "latitude": 22.7942358,
+        "longitude": 5.5361426,
+        "geo_type": "APPROXIMATE",
+        "geo_verified": true
     },
     {
         "id": 12,
         "code": 12,
-        "name": "Tbessa",
+        "name": "Tébessa",
         "arabic_name": "تبسة",
-        "longitude": 35.1290691,
-        "latitude": 7.9592863
+        "slug": "tebessa",
+        "latitude": 35.4010797,
+        "longitude": 8.1172958,
+        "geo_type": "APPROXIMATE",
+        "geo_verified": true
     },
     {
         "id": 13,
         "code": 13,
         "name": "Tlemcen",
         "arabic_name": "تلمسان",
-        "longitude": 34.8828864,
-        "latitude": -1.3166815
+        "slug": "tlemcen",
+        "latitude": 34.8828864,
+        "longitude": -1.3166815,
+        "geo_type": "APPROXIMATE",
+        "geo_verified": true
     },
     {
         "id": 14,
         "code": 14,
         "name": "Tiaret",
         "arabic_name": "تيارت",
-        "longitude": 35.3708689,
-        "latitude": 1.3217852
+        "slug": "tiaret",
+        "latitude": 34.8529489,
+        "longitude": 1.5208624,
+        "geo_type": "APPROXIMATE",
+        "geo_verified": true
     },
     {
         "id": 15,
         "code": 15,
         "name": "Tizi Ouzou",
         "arabic_name": "تيزي وزو",
-        "longitude": 36.706911,
-        "latitude": 4.2333355
+        "slug": "tizi-ouzou",
+        "latitude": 36.713548,
+        "longitude": 4.0473075,
+        "geo_type": "APPROXIMATE",
+        "geo_verified": true
     },
     {
         "id": 16,
         "code": 16,
-        "name": "Alger",
+        "name": "Algiers",
         "arabic_name": "الجزائر",
-        "longitude": 36.753768,
-        "latitude": 3.0587561
+        "slug": "algiers",
+        "latitude": 36.753768,
+        "longitude": 3.0587561,
+        "geo_type": "APPROXIMATE",
+        "geo_verified": true
     },
     {
         "id": 17,
         "code": 17,
         "name": "Djelfa",
         "arabic_name": "الجلفة",
-        "longitude": 34.6703956,
-        "latitude": 3.2503761
+        "slug": "djelfa",
+        "latitude": 34.6703956,
+        "longitude": 3.2503761,
+        "geo_type": "APPROXIMATE",
+        "geo_verified": true
     },
     {
         "id": 18,
         "code": 18,
         "name": "Jijel",
         "arabic_name": "جيجل",
-        "longitude": 36.8210144,
-        "latitude": 5.7634126
+        "slug": "jijel",
+        "latitude": 36.8210144,
+        "longitude": 5.7634126,
+        "geo_type": "APPROXIMATE",
+        "geo_verified": true
     },
     {
         "id": 19,
         "code": 19,
-        "name": "Setif",
+        "name": "Sétif",
         "arabic_name": "سطيف",
-        "longitude": 36.1897593,
-        "latitude": 5.4107984
+        "slug": "setif",
+        "latitude": 36.3073389,
+        "longitude": 5.5617279,
+        "geo_type": "APPROXIMATE",
+        "geo_verified": true
     },
     {
         "id": 20,
         "code": 20,
-        "name": "Saefda",
+        "name": "Saïda",
         "arabic_name": "سعيدة",
-        "longitude": 36.7505029,
-        "latitude": 3.4695305
+        "slug": "saida",
+        "latitude": 34.6855597,
+        "longitude": 0.1494988,
+        "geo_type": "APPROXIMATE",
+        "geo_verified": true
     },
     {
         "id": 21,
         "code": 21,
         "name": "Skikda",
         "arabic_name": "سكيكدة",
-        "longitude": 36.8662658,
-        "latitude": 6.9062556
+        "slug": "skikda",
+        "latitude": 36.8620804,
+        "longitude": 6.9054888,
+        "geo_type": "APPROXIMATE",
+        "geo_verified": true
     },
     {
         "id": 22,
         "code": 22,
-        "name": "Sidi Bel Abbes",
+        "name": "Sidi Bel Abbès",
         "arabic_name": "سيدي بلعباس",
-        "longitude": 35.2105876,
-        "latitude": -0.629983
+        "slug": "sidi-bel-abbes",
+        "latitude": 35.2105876,
+        "longitude": -0.629983,
+        "geo_type": "APPROXIMATE",
+        "geo_verified": true
     },
     {
         "id": 23,
         "code": 23,
-        "name": "Annaba",
+        "name": "Anaba",
         "arabic_name": "عنابة",
-        "longitude": 36.9142081,
-        "latitude": 7.7426673
+        "slug": "annaba",
+        "latitude": 36.897375,
+        "longitude": 7.7500122,
+        "geo_type": "APPROXIMATE",
+        "geo_verified": true
     },
     {
         "id": 24,
         "code": 24,
         "name": "Guelma",
         "arabic_name": "قالمة",
-        "longitude": 36.4627444,
-        "latitude": 7.4330833
+        "slug": "guelma",
+        "latitude": 36.4627444,
+        "longitude": 7.4330833,
+        "geo_type": "APPROXIMATE",
+        "geo_verified": true
     },
     {
         "id": 25,
         "code": 25,
         "name": "Constantine",
         "arabic_name": "قسنطينة",
-        "longitude": 36.3570052,
-        "latitude": 6.6390282
+        "slug": "constantine",
+        "latitude": 36.3569496,
+        "longitude": 6.638871,
+        "geo_type": "APPROXIMATE",
+        "geo_verified": true
     },
     {
         "id": 26,
         "code": 26,
-        "name": "Medea",
+        "name": "Médéa",
         "arabic_name": "المدية",
-        "longitude": 36.2637078,
-        "latitude": 2.7587857
+        "slug": "medea",
+        "latitude": 36.2636153,
+        "longitude": 2.7586773,
+        "geo_type": "APPROXIMATE",
+        "geo_verified": true
     },
     {
         "id": 27,
         "code": 27,
         "name": "Mostaganem",
         "arabic_name": "مستغانم",
-        "longitude": 35.9311454,
-        "latitude": 0.0909414
+        "slug": "mostaganem",
+        "latitude": 35.9311454,
+        "longitude": 0.0909414,
+        "geo_type": "APPROXIMATE",
+        "geo_verified": true
     },
     {
         "id": 28,
         "code": 28,
         "name": "M'Sila",
         "arabic_name": "المسيلة",
-        "longitude": 35.7186646,
-        "latitude": 4.5233423
+        "slug": "msila",
+        "latitude": 35.7150585,
+        "longitude": 4.528293,
+        "geo_type": "APPROXIMATE",
+        "geo_verified": true
     },
     {
         "id": 29,
         "code": 29,
         "name": "Mascara",
         "arabic_name": "معسكر",
-        "longitude": 35.4020988,
-        "latitude": 0.1400257
+        "slug": "mascara",
+        "latitude": 35.4020988,
+        "longitude": 0.1400257,
+        "geo_type": "APPROXIMATE",
+        "geo_verified": true
     },
     {
         "id": 30,
         "code": 30,
         "name": "Ouargla",
         "arabic_name": "ورقلة",
-        "longitude": 31.9527411,
-        "latitude": 5.3335348
+        "slug": "ouargla",
+        "latitude": 31.9527411,
+        "longitude": 5.3335348,
+        "geo_type": "APPROXIMATE",
+        "geo_verified": true
     },
     {
         "id": 31,
         "code": 31,
         "name": "Oran",
         "arabic_name": "وهران",
-        "longitude": 35.6987388,
-        "latitude": -0.6349319
+        "slug": "oran",
+        "latitude": 35.6987388,
+        "longitude": -0.6349319,
+        "geo_type": "APPROXIMATE",
+        "geo_verified": true
     },
     {
         "id": 32,
         "code": 32,
         "name": "El Bayadh",
         "arabic_name": "البيض",
-        "longitude": 33.6854149,
-        "latitude": 1.0303543
+        "slug": "el-bayadh",
+        "latitude": 32.7148824,
+        "longitude": 0.9056623,
+        "geo_type": "APPROXIMATE",
+        "geo_verified": true
     },
     {
         "id": 33,
         "code": 33,
         "name": "Illizi",
         "arabic_name": "إليزي",
-        "longitude": 26.4775863,
-        "latitude": 8.4776326
+        "slug": "illizi",
+        "latitude": 26.5081447,
+        "longitude": 8.4830175,
+        "geo_type": "APPROXIMATE",
+        "geo_verified": true
     },
     {
         "id": 34,
         "code": 34,
         "name": "Bordj Bou Arreridj",
         "arabic_name": "برج بوعريريج",
-        "longitude": 36.0739925,
-        "latitude": 4.7630271
+        "slug": "bordj-bou-arreridj",
+        "latitude": 36.0739925,
+        "longitude": 4.7630271,
+        "geo_type": "APPROXIMATE",
+        "geo_verified": true
     },
     {
         "id": 35,
         "code": 35,
-        "name": "Boumerdes",
+        "name": "Boumerdès",
         "arabic_name": "بومرداس",
-        "longitude": 36.7510697,
-        "latitude": 3.4788905
+        "slug": "boumerdes",
+        "latitude": 36.6839559,
+        "longitude": 3.6217802,
+        "geo_type": "APPROXIMATE",
+        "geo_verified": true
     },
     {
         "id": 36,
         "code": 36,
         "name": "El Tarf",
         "arabic_name": "الطارف",
-        "longitude": 36.7576678,
-        "latitude": 8.3076343
+        "slug": "el-tarf",
+        "latitude": 36.7558581,
+        "longitude": 8.2212979,
+        "geo_type": "APPROXIMATE",
+        "geo_verified": true
     },
     {
         "id": 37,
         "code": 37,
         "name": "Tindouf",
         "arabic_name": "تندوف",
-        "longitude": 27.6719159,
-        "latitude": -8.1398003
+        "slug": "tindouf",
+        "latitude": 27.677069,
+        "longitude": -8.128375,
+        "geo_type": "APPROXIMATE",
+        "geo_verified": true
     },
     {
         "id": 38,
         "code": 38,
         "name": "Tissemsilt",
         "arabic_name": "تيسمسيلت",
-        "longitude": 35.8174139,
-        "latitude": 1.5983959
+        "slug": "tissemsilt",
+        "latitude": 35.6053781,
+        "longitude": 1.813098,
+        "geo_type": "APPROXIMATE",
+        "geo_verified": true
     },
     {
         "id": 39,
         "code": 39,
         "name": "El Oued",
         "arabic_name": "الوادي",
-        "longitude": 33.367811,
-        "latitude": 6.8516511
+        "slug": "el-oued",
+        "latitude": 32.4983491,
+        "longitude": 7.4381355,
+        "geo_type": "APPROXIMATE",
+        "geo_verified": true
     },
     {
         "id": 40,
         "code": 40,
         "name": "Khenchela",
         "arabic_name": "خنشلة",
-        "longitude": 35.4269404,
-        "latitude": 7.1460155
+        "slug": "khenchela",
+        "latitude": 35.4269404,
+        "longitude": 7.1460155,
+        "geo_type": "APPROXIMATE",
+        "geo_verified": true
     },
     {
         "id": 41,
         "code": 41,
         "name": "Souk Ahras",
         "arabic_name": "سوق أهراس",
-        "longitude": 36.2801062,
-        "latitude": 7.9384033
+        "slug": "souk-ahras",
+        "latitude": 36.2799517,
+        "longitude": 7.9382788,
+        "geo_type": "APPROXIMATE",
+        "geo_verified": true
     },
     {
         "id": 42,
         "code": 42,
         "name": "Tipaza",
         "arabic_name": "تيبازة",
-        "longitude": 36.5906719,
-        "latitude": 2.4433723
+        "slug": "tipaza",
+        "latitude": 36.5906719,
+        "longitude": 2.4433723,
+        "geo_type": "APPROXIMATE",
+        "geo_verified": true
     },
     {
         "id": 43,
         "code": 43,
         "name": "Mila",
         "arabic_name": "ميلة",
-        "longitude": 36.4519049,
-        "latitude": 6.2584338
+        "slug": "mila",
+        "latitude": 36.4517556,
+        "longitude": 6.2585095,
+        "geo_type": "APPROXIMATE",
+        "geo_verified": true
     },
     {
         "id": 44,
         "code": 44,
-        "name": "Ain Defla",
+        "name": "Aïn Defla",
         "arabic_name": "عين الدفلى",
-        "longitude": 36.1585027,
-        "latitude": 2.0665197
+        "slug": "ain-defla",
+        "latitude": 36.2566993,
+        "longitude": 1.9532323,
+        "geo_type": "APPROXIMATE",
+        "geo_verified": true
     },
     {
         "id": 45,
         "code": 45,
-        "name": "Naama",
+        "name": "Naâma",
         "arabic_name": "النعامة",
-        "longitude": 33.4350615,
-        "latitude": -0.9056623
+        "slug": "naama",
+        "latitude": 33.2667317,
+        "longitude": -0.3128659,
+        "geo_type": "APPROXIMATE",
+        "geo_verified": true
     },
     {
         "id": 46,
         "code": 46,
-        "name": "Ain Temouchent",
+        "name": "Aïn Témouchent",
         "arabic_name": "عين تموشنت",
-        "longitude": 35.2974176,
-        "latitude": -1.135302
+        "slug": "ain-temouchent",
+        "latitude": 35.3038931,
+        "longitude": -1.1391863,
+        "geo_type": "APPROXIMATE",
+        "geo_verified": true
     },
     {
         "id": 47,
         "code": 47,
-        "name": "Ghardaefa",
+        "name": "Ghardaïa",
         "arabic_name": "غرداية",
-        "longitude": 32.4943741,
-        "latitude": 3.64446
+        "slug": "ghardaia",
+        "latitude": 32.4943741,
+        "longitude": 3.64446,
+        "geo_type": "APPROXIMATE",
+        "geo_verified": true
     },
     {
         "id": 48,
         "code": 48,
         "name": "Relizane",
         "arabic_name": "غليزان",
-        "longitude": 35.7383405,
-        "latitude": 0.7532809
+        "slug": "relizane",
+        "latitude": 35.7450263,
+        "longitude": 0.5578837,
+        "geo_type": "APPROXIMATE",
+        "geo_verified": true
     },
     {
         "id": 49,
         "code": 49,
         "name": "Timimoun",
         "arabic_name": "تيميمون",
-        "longitude": 29.2616911,
-        "latitude": 0.2415964
+        "slug": "timimoun",
+        "latitude": 29.2616911,
+        "longitude": 0.2415964,
+        "geo_type": "APPROXIMATE",
+        "geo_verified": true
     },
     {
         "id": 50,
         "code": 50,
-        "name": "Bordj Baji Mokhtar",
+        "name": "Bordj Badji Mokhtar",
         "arabic_name": "برج باجي مختار",
-        "longitude": 21.32551,
-        "latitude": 0.9524803
+        "slug": "bordj-badji-mokhtar",
+        "latitude": 21.32551,
+        "longitude": 0.9524803,
+        "geo_type": "APPROXIMATE",
+        "geo_verified": true
     },
     {
         "id": 51,
         "code": 51,
         "name": "Ouled Djellal",
-        "arabic_name": "اولاد جلال",
-        "longitude": 34.4294289,
-        "latitude": 5.0681159
+        "arabic_name": "أولاد جلال",
+        "slug": "ouled-djellal",
+        "latitude": 34.4303855,
+        "longitude": 5.0611761,
+        "geo_type": "APPROXIMATE",
+        "geo_verified": true
     },
     {
         "id": 52,
         "code": 52,
-        "name": "Béni Abbès",
+        "name": "Beni Abbes",
         "arabic_name": "بني عباس",
-        "longitude": 30.1312217,
-        "latitude": -2.1662258
+        "slug": "beni-abbes",
+        "latitude": 30.1312217,
+        "longitude": -2.1662258,
+        "geo_type": "APPROXIMATE",
+        "geo_verified": true
     },
     {
         "id": 53,
         "code": 53,
         "name": "In Salah",
         "arabic_name": "عين صالح",
-        "longitude": 27.2026311,
-        "latitude": 2.4878487
+        "slug": "in-salah",
+        "latitude": 27.1972183,
+        "longitude": 2.4806241,
+        "geo_type": "APPROXIMATE",
+        "geo_verified": true
     },
     {
         "id": 54,
         "code": 54,
         "name": "In Guezzam",
         "arabic_name": "عين قزام",
-        "longitude": 19.5632255,
-        "latitude": 5.7717952
+        "slug": "in-guezzam",
+        "latitude": 19.5732736,
+        "longitude": 5.7693343,
+        "geo_type": "APPROXIMATE",
+        "geo_verified": true
     },
     {
         "id": 55,
         "code": 55,
         "name": "Touggourt",
         "arabic_name": "تقرت",
-        "longitude": 33.1049642,
-        "latitude": 6.0662834
+        "slug": "touggourt",
+        "latitude": 33.1049642,
+        "longitude": 6.0662834,
+        "geo_type": "APPROXIMATE",
+        "geo_verified": true
     },
     {
         "id": 56,
         "code": 56,
         "name": "Djanet",
         "arabic_name": "جانت",
-        "longitude": 24.554151,
-        "latitude": 9.485429
+        "slug": "djanet",
+        "latitude": 24.554151,
+        "longitude": 9.485429,
+        "geo_type": "APPROXIMATE",
+        "geo_verified": true
     },
     {
         "id": 57,
         "code": 57,
-        "name": "El M'ghair",
+        "name": "El M'Ghair",
         "arabic_name": "المغير",
-        "longitude": 33.950285,
-        "latitude": 5.9244238
+        "slug": "el-mghair",
+        "latitude": 33.950285,
+        "longitude": 5.9244238,
+        "geo_type": "APPROXIMATE",
+        "geo_verified": true
     },
     {
         "id": 58,
         "code": 58,
-        "name": "El Menia",
+        "name": "El Meniaa",
         "arabic_name": "المنيعة",
-        "longitude": 30.5833161,
-        "latitude": 2.8836701
+        "slug": "el-meniaa",
+        "latitude": 30.5833161,
+        "longitude": 2.8836701,
+        "geo_type": "APPROXIMATE",
+        "geo_verified": true
+    },
+    {
+        "id": 59,
+        "code": 59,
+        "name": "Aflou",
+        "arabic_name": "أفلو",
+        "slug": "aflou",
+        "latitude": 34.1139518,
+        "longitude": 2.0973854,
+        "geo_type": "APPROXIMATE",
+        "geo_verified": true
+    },
+    {
+        "id": 60,
+        "code": 60,
+        "name": "El Abiodh Sidi Cheikh",
+        "arabic_name": "الأبيض سيدي الشيخ",
+        "slug": "el-abiodh-sidi-cheikh",
+        "latitude": 32.8974185,
+        "longitude": 0.5441745,
+        "geo_type": "APPROXIMATE",
+        "geo_verified": true
+    },
+    {
+        "id": 61,
+        "code": 61,
+        "name": "El Aricha",
+        "arabic_name": "العريشة",
+        "slug": "el-aricha",
+        "latitude": 34.2231745,
+        "longitude": -1.2561701,
+        "geo_type": "APPROXIMATE",
+        "geo_verified": true
+    },
+    {
+        "id": 62,
+        "code": 62,
+        "name": "El Kantara",
+        "arabic_name": "القنطرة",
+        "slug": "el-kantara",
+        "latitude": 36.6997294,
+        "longitude": 3.0576199,
+        "geo_type": "APPROXIMATE",
+        "geo_verified": true
+    },
+    {
+        "id": 63,
+        "code": 63,
+        "name": "Barika",
+        "arabic_name": "بريكة",
+        "slug": "barika",
+        "latitude": 35.3877747,
+        "longitude": 5.3703633,
+        "geo_type": "APPROXIMATE",
+        "geo_verified": true
+    },
+    {
+        "id": 64,
+        "code": 64,
+        "name": "Bou Saada",
+        "arabic_name": "بوسعادة",
+        "slug": "bou-saada",
+        "latitude": 35.211421,
+        "longitude": 4.1787621,
+        "geo_type": "APPROXIMATE",
+        "geo_verified": true
+    },
+    {
+        "id": 65,
+        "code": 65,
+        "name": "Bir El Ater",
+        "arabic_name": "بير العاتر",
+        "slug": "bir-el-ater",
+        "latitude": 34.749839,
+        "longitude": 8.0577526,
+        "geo_type": "APPROXIMATE",
+        "geo_verified": true
+    },
+    {
+        "id": 66,
+        "code": 66,
+        "name": "Ksar El Boukhari",
+        "arabic_name": "قصر البخاري",
+        "slug": "ksar-el-boukhari",
+        "latitude": 35.8764398,
+        "longitude": 2.7487581,
+        "geo_type": "APPROXIMATE",
+        "geo_verified": true
+    },
+    {
+        "id": 67,
+        "code": 67,
+        "name": "Ksar Chellala",
+        "arabic_name": "قصر الشلالة",
+        "slug": "ksar-chellala",
+        "latitude": 35.2234375,
+        "longitude": 2.3119844,
+        "geo_type": "APPROXIMATE",
+        "geo_verified": true
+    },
+    {
+        "id": 68,
+        "code": 68,
+        "name": "Ain Oussara",
+        "arabic_name": "عين وسارة",
+        "slug": "ain-oussara",
+        "latitude": 35.4487155,
+        "longitude": 2.9073552,
+        "geo_type": "APPROXIMATE",
+        "geo_verified": true
+    },
+    {
+        "id": 69,
+        "code": 69,
+        "name": "Messaad",
+        "arabic_name": "مسعد",
+        "slug": "messaad",
+        "latitude": 34.1540623,
+        "longitude": 3.4922857,
+        "geo_type": "APPROXIMATE",
+        "geo_verified": true
     }
 ]
