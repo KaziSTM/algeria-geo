@@ -39,7 +39,7 @@ class InstallCommand extends Command
 
         $tablesExist = Schema::hasTable('cities') || Schema::hasTable('communes');
 
-        if ($tablesExist && !$force) {
+        if ($tablesExist && !$force && !$shouldSeed) {
             $this->warn('Algeria Geo tables (cities/communes) already exist.');
             $this->line('Skipping migrations and seeding.');
             $this->line('Use the --force option to run them anyway (use with caution!).');
@@ -51,15 +51,17 @@ class InstallCommand extends Command
             $this->warn('Using --force option. Running migrations and potentially seeders even though tables exist...');
         }
 
-        $this->line('Running migrations...');
-        $migrationPath = 'vendor/kazistm/algeria-geo/src/Database/Migrations';
+        $migrationPath = is_dir(base_path('vendor/kazistm/algeria-geo/src/Database/Migrations'))
+            ? base_path('vendor/kazistm/algeria-geo/src/Database/Migrations')
+            : realpath(__DIR__ . '/../Database/Migrations');
 
-        if (!is_dir(base_path($migrationPath))) {
-            $this->warn("Package migration path not found at '{$migrationPath}'. Attempting default migration run.");
-            $migrateExitCode = Artisan::call('migrate', ['--force' => true]);
-        } else {
-            $migrateExitCode = Artisan::call('migrate', ['--path' => $migrationPath, '--force' => true]);
-        }
+        $this->line('Running migrations...');
+
+        $migrateExitCode = Artisan::call('migrate', [
+            '--path' => $migrationPath,
+            '--realpath' => true,
+            '--force' => true,
+        ]);
 
 
         if ($migrateExitCode === 0) {

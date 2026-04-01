@@ -2,46 +2,23 @@
 
 namespace KaziSTM\AlgeriaGeo;
 
-use Illuminate\Support\ServiceProvider;
 use KaziSTM\AlgeriaGeo\Console\InstallCommand;
+use Spatie\LaravelPackageTools\Package;
+use Spatie\LaravelPackageTools\PackageServiceProvider;
 
-class AlgeriaGeoServiceProvider extends ServiceProvider
+class AlgeriaGeoServiceProvider extends PackageServiceProvider
 {
-    /**
-     * Register services.
-     *
-     * @return void
-     */
-    public function register()
+    public function configurePackage(Package $package): void
     {
-    }
-
-    /**
-     * Bootstrap services.
-     *
-     * @return void
-     */
-    public function boot()
-    {
-        $this->loadMigrationsFrom(__DIR__.'/Database/Migrations');
-
-        if ($this->app->runningInConsole()) {
-            $this->commands([
-                InstallCommand::class,
-            ]);
-
-            $this->publishes([
-                __DIR__.'/Database/Migrations/' => database_path('migrations')
-            ], 'algeria-geo-migrations');
-
-            $this->publishes([
-                __DIR__.'/Database/Seeders/' => database_path('seeders')
-            ], 'algeria-geo-seeders');
-
-            $this->publishes([
-                __DIR__.'/../data/' => storage_path('app/algeria-geo-data')
-            ], 'algeria-geo-data');
-
-        }
+        $package
+            ->name('algeria-geo')
+            ->hasMigrations([
+                'create_cities_table',
+                'create_communes_table',
+            ])
+            ->hasCommand(InstallCommand::class)
+            ->publishesServiceProvider('algeria-geo')
+            ->hasAssets()
+            ->hasConfigFile();
     }
 }
