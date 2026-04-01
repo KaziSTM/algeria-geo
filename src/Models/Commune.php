@@ -16,6 +16,7 @@ use Illuminate\Support\Carbon;
  * @property string $name The name of the commune.
  * @property int $wilaya_id Foreign key referencing the City (Wilaya).
  * @property string $arabic_name The Arabic name of the commune.
+ * @property string $slug The slug of the commune.
  * @property float|null $latitude
  * @property float|null $longitude
  * @property float|null $distance Calculated distance in radius searches.
@@ -37,6 +38,7 @@ class Commune extends Model
         'name',
         'wilaya_id',
         'arabic_name',
+        'slug',
         'latitude',
         'longitude',
     ];
@@ -60,6 +62,21 @@ class Commune extends Model
     {
         return static::query()->postCode($postCode)->first();
     }
+
+
+    /**
+     * Find a commune by its slug.
+     * Returns null if not found.
+     *
+     * @param  string  $slug  The Commune Slug.
+     * @return static|null
+     */
+    public static function findBySlug(string $slug): ?static
+    {
+        return static::query()->slug($slug)->first();
+    }
+
+
 
     //--------------------------------------------------------------------------
     // Scopes
@@ -108,6 +125,19 @@ class Commune extends Model
     }
 
 
+    /**
+     * Scope a query to filter communes by slug.
+     *
+     * @param  Builder  $query
+     * @param  string  $slug  The slug.
+     * @return Builder
+     */
+    public function scopeSlug(Builder $query, string $slug): Builder
+    {
+        return $query->where('slug', $slug);
+    }
+
+
     //--------------------------------------------------------------------------
     // Helper Methods
     //--------------------------------------------------------------------------
@@ -144,10 +174,10 @@ class Commune extends Model
             ->selectRaw("{$haversine} AS distance")
             ->whereNotNull('latitude')
             ->whereNotNull('longitude')
-            ->havingRaw("distance <= ?", [$radius])
+            // Use whereRaw instead of havingRaw for SQLite compatibility
+            ->whereRaw("{$haversine} <= ?", [$radius])
             ->orderBy('distance', 'asc');
     }
-
     /**
      * Get the coordinates as an associative array.
      * Returns null if latitude or longitude is missing.

@@ -20,9 +20,11 @@ return new class extends Migration
             $table->string('name');
             $table->unsignedBigInteger('wilaya_id');
             $table->string('arabic_name');
+            $table->string('slug');
             $table->decimal('latitude', 11, 8)->nullable();
             $table->decimal('longitude', 10, 8)->nullable();
 
+            $table->unique(['wilaya_id', 'slug']);
             $table->foreign('wilaya_id')
                 ->references('id')
                 ->on('cities')

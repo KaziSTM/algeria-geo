@@ -16,6 +16,7 @@ use Illuminate\Support\Carbon;
  * @property int $code The official wilaya code.
  * @property string $name The name of the city (wilaya).
  * @property string $arabic_name The Arabic name of the city (wilaya).
+ * @property string $slug The slug of the city (wilaya).
  * @property float|null $longitude
  * @property float|null $latitude
  * @property Carbon|null $created_at
@@ -39,6 +40,7 @@ class City extends Model
         'code',
         'name',
         'arabic_name',
+        'slug',
         'longitude',
         'latitude',
     ];
@@ -58,6 +60,18 @@ class City extends Model
     public static function findByCode(int $code): ?static
     {
         return static::code($code)->first();
+    }
+
+    /**
+     * Find a city by its official code.
+     * Returns null if not found.
+     *
+     * @param  int  $code  The Wilaya code.
+     * @return static|null
+     */
+    public static function findBySlug(string $slug): ?static
+    {
+        return static::slug($slug)->first();
     }
 
     //--------------------------------------------------------------------------
@@ -108,6 +122,18 @@ class City extends Model
     public function scopeCode(Builder $query, int $code): Builder
     {
         return $query->where('code', $code);
+    }
+
+    /**
+     * Scope a query to filter cities by their slug.
+     *
+     * @param  Builder  $query
+     * @param  string  $slug  The Wilaya slug.
+     * @return Builder
+     */
+    public function scopeSlug(Builder $query, string $slug): Builder
+    {
+        return $query->where('slug', $slug);
     }
 
     /**

@@ -24,6 +24,7 @@ class CitySeeder extends Seeder
                 'code'         => $city['code'],
                 'name'         => $city['name'],
                 'arabic_name'  => $city['arabic_name'],
+                'slug'         => $city['slug'],
                 'latitude'     => $city['latitude'] ?? null,
                 'longitude'    => $city['longitude'] ?? null,
             ])
@@ -33,7 +34,7 @@ class CitySeeder extends Seeder
                 City::upsert(
                     $chunk->toArray(),
                     ['id'], // unique key
-                    ['code', 'name', 'arabic_name', 'latitude', 'longitude']
+                    ['code', 'name', 'arabic_name','slug', 'latitude', 'longitude']
                 )
             );
     }

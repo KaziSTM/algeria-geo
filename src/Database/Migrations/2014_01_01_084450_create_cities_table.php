@@ -15,10 +15,10 @@ return new class extends Migration
     {
         Schema::create('cities', function (Blueprint $table) {
             $table->id();
-
-            $table->integer('code')->unique()->comment('Wilaya Code');
+            $table->unsignedSmallInteger('code')->unique()->comment('Wilaya Code');
             $table->string('name');
             $table->string('arabic_name');
+            $table->string('slug', 100)->unique();
             $table->decimal('longitude', 11, 8)->nullable();
             $table->decimal('latitude', 10, 8)->nullable();
 
