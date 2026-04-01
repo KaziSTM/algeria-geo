@@ -3,9 +3,18 @@
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/kazistm/algeria-geo.svg?style=flat-square)](https://packagist.org/packages/kazistm/algeria-geo)
 [![Total Downloads](https://img.shields.io/packagist/dt/kazistm/algeria-geo.svg?style=flat-square)](https://packagist.org/packages/kazistm/algeria-geo)
 [![License](https://img.shields.io/packagist/l/kazistm/algeria-geo.svg?style=flat-square)](https://packagist.org/packages/kazistm/algeria-geo)
-This Laravel package provides a straightforward way to integrate Algerian administrative divisions (Wilayas/Cities and
-Communes) into your application. It comes complete with Eloquent models, database migrations, seeders populated from
-official data, and helpful query scopes and methods, including geospatial radius searching.
+
+## 🇩🇿 Algeria Administrative Update
+
+This package fully supports Algeria’s latest administrative division:
+
+- ✅ 69 Wilayas (updated law)
+- ✅ Complete Communes dataset
+- ✅ Normalized naming (FR / AR)
+- ✅ Unique slugs for reliable lookups
+- ✅ Geographic coordinates (lat/lng)
+
+> Unlike many existing packages, this dataset reflects the **latest official Algerian administrative structure**.
 
 ---
 
