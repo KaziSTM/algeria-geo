@@ -45,13 +45,17 @@ official data, and helpful query scopes and methods, including geospatial radius
 
 * **Eloquent Models:** `City` (Wilaya) and `Commune` models ready to use.
 * **Relationships:** Pre-defined `hasMany` (City->Communes) and `belongsTo` (Commune->City) relationships.
-* **Database Migrations:** Sets up `cities` and `communes` tables with appropriate types and indices.
-* **Database Seeders:** Populates tables with comprehensive data for 58 Wilayas and their Communes.
+* **Database Migrations:** Sets up optimized `cities` and `communes` tables with proper indexes and constraints.
+* **Database Seeders:** Fully updated dataset covering **all 69 Algerian Wilayas** and their Communes.
+* **Slug Support:** Unique slugs for both Cities and Communes for clean URLs and lookups.
+* **Data Integrity:** Prevents duplicates via composite unique constraints (`wilaya_id + slug`).
+* **Robust Seeding:** Handles missing/partial data safely and avoids crashes.
 * **Easy Installation:** Single Artisan command (`algeria-geo:install`) for migration and optional seeding.
-* **Helpful Query Scopes:** Includes scopes for searching by name, code, postal code, and **geospatial radius**.
+* **Helpful Query Scopes:** Includes scopes for searching by name, code, slug, postal code, and **geospatial radius**.
 * **Convenience Methods:** Helpers for retrieving coordinates and display names.
-* **Laravel Compatibility:** Supports Laravel 10, 11+.
-* **Well-Documented:** Models include detailed PHPDocs.
+* **High Test Coverage:** Fully tested with **>95% Pest coverage** ensuring reliability.
+* **Laravel Compatibility:** Supports Laravel 10 → 13 and PHP 8.1 → 8.5.
+* **Production Ready:** Designed for SaaS and real-world geo use cases.
 
 ## Installation
 
@@ -119,6 +123,7 @@ Represents an Algerian Wilaya.
 | `code`        | `int`       | Wilaya code (e.g., `16`)                  |
 | `name`        | `string`    | Wilaya name (e.g., `"Alger"`)             |
 | `arabic_name` | `string`    | Wilaya name in Arabic (e.g., `"الجزائر"`) |
+| `slug`        | `string`    | Unique slug (e.g., `"algiers"`)           |
 | `longitude`   | `float      | null`                                     | Optional longitude                     |
 | `latitude`    | `float      | null`                                     | Optional latitude                      |
 | `created_at`  | `timestamp` | Timestamp                                 |
@@ -130,18 +135,21 @@ Represents an Algerian Wilaya.
 
 Represents an Algerian Commune (Daira).
 
-| Column        | Type        | Description                |
-|---------------|-------------|----------------------------|
-| `id`          | Primary Key | Unique identifier          |
-| `post_code`   | `string     | null`                      | Postal code (nullable)                                       |
-| `name`        | `string`    | Commune name               |
-| `wilaya_id`   | `int`       | Foreign key to `cities.id` |
-| `arabic_name` | `string`    | Commune name in Arabic     |
-| `longitude`   | `float      | null`                      | Optional longitude                                            |
-| `latitude`    | `float      | null`                      | Optional latitude                                             |
-| `distance`    | `float      | null`                      | Available after using `withinRadius` scope                   |
-| `created_at`  | `timestamp` | Timestamp                  |
-| `updated_at`  | `timestamp` | Timestamp                  |
+| Column        | Type        | Description                                |
+|---------------|-------------|--------------------------------------------|
+| `id`          | Primary Key | Unique identifier                          |
+| `post_code`   | `string     | null`                                      | Postal code (nullable)                                       |
+| `name`        | `string`    | Commune name                               |
+| `wilaya_id`   | `int`       | Foreign key to `cities.id`                 |
+| `arabic_name` | `string`    | Commune name in Arabic                     |
+| `slug`        | `string`    | Unique per Wilaya (used for lookup & URLs) |
+| `longitude`   | `float      | null`                                      | Optional longitude                                            |
+| `latitude`    | `float      | null`                                      | Optional latitude                                             |
+| `distance`    | `float      | null`                                      | Available after using `withinRadius` scope                   |
+| `created_at`  | `timestamp` | Timestamp                                  |
+| `updated_at`  | `timestamp` | Timestamp                                  |
+
+> ⚠️ Note: A unique constraint is enforced on (`wilaya_id`, `slug`) to prevent duplicates.
 
 ### Basic Retrieval
 
@@ -331,6 +339,24 @@ search.
 
 ---
 
+#### `City::findBySlug()`
+
+Finds a City (Wilaya) by its slug.
+
+```php
+$city = City::findBySlug('oran');
+````
+
+#### `Commune::findBySlu()`
+
+Finds a Commune by its slug.
+
+```php
+$commune = Commune::findBySlug('bir-el-djir');
+````
+
+---
+
 ## Helper Methods
 
 Instance methods available on retrieved models.
@@ -371,11 +397,49 @@ echo $commune->getDisplayName(true);   // Output: الجزائر الوسطى
 
 ### Data Source
 
-The data used in the seeders originates from publicly available datasets for Algerian Wilayas and Communes, typically
-including names, codes, and geographical coordinates. Data accuracy reflects the source data available at the time of
-package creation/update.
+The dataset has been **fully updated to reflect Algeria’s latest administrative divisions (69 Wilayas)**.
+
+### Improvements:
+- ✅ Complete coverage of all **69 Wilayas**
+- ✅ Updated and expanded Communes dataset
+- ✅ Added geographic coordinates (lat/lng) where available
+- ✅ Normalized naming (FR / AR)
+- ✅ Added slugs for consistent identification
+- ✅ Removed duplicates and fixed inconsistent records
+
+The seeders are designed to be:
+- **Idempotent** (safe to run multiple times)
+- **Resilient** to partial or evolving datasets
+- **Optimized** for performance using chunked upserts
 
 ---
+
+## Testing
+
+This package includes a comprehensive test suite built with Pest.
+
+### Coverage
+- ✅ Models (City, Commune)
+- ✅ Seeders (data integrity & edge cases)
+- ✅ Install Command (all execution paths)
+
+> Test coverage is maintained at **>95%** to ensure stability and reliability.
+
+### Run tests
+
+```bash
+composer test
+
+```
+
+### Run coverage
+
+
+```bash
+composer test:coverage
+
+```
+
 
 ### Contributing
 
