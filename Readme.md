@@ -3,6 +3,7 @@
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/kazistm/algeria-geo.svg?style=flat-square)](https://packagist.org/packages/kazistm/algeria-geo)
 [![Total Downloads](https://img.shields.io/packagist/dt/kazistm/algeria-geo.svg?style=flat-square)](https://packagist.org/packages/kazistm/algeria-geo)
 [![License](https://img.shields.io/packagist/l/kazistm/algeria-geo.svg?style=flat-square)](https://packagist.org/packages/kazistm/algeria-geo)
+[![Laravel Compatibility](https://badge.laravel.cloud/badge/KaziSTM/algeria-geo?style=for-the-badge)](https://packagist.org/packages/KaziSTM/algeria-geo)
 
 ## 🇩🇿 Algeria Administrative Update
 
